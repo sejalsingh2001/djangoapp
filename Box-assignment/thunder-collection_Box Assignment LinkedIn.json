@@ -1,0 +1,152 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Box Assignment LinkedIn",
+    "dateExported": "2023-05-19T04:57:39.503Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "e16665e0-cdf0-4130-bee2-32c4455adef0",
+            "colId": "80927bf8-1e8c-4486-a1d6-9567012fbd15",
+            "containerId": "",
+            "name": "register",
+            "url": "localhost:8000/api/register/",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-05-18T19:19:17.264Z",
+            "modified": "2023-05-18T21:47:36.274Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\" : \"k1\",\n  \"password\" : \"1234\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "26296ab7-1d86-47eb-ba5f-9e3a69e8eb5a",
+            "colId": "80927bf8-1e8c-4486-a1d6-9567012fbd15",
+            "containerId": "",
+            "name": "login",
+            "url": "localhost:8000/api/token/",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-05-18T19:20:47.359Z",
+            "modified": "2023-05-18T21:48:48.555Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\" : \"kaushal\",\n  \"password\" : \"1234\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "76b73919-e8a7-4260-94d7-561c0638e88b",
+            "colId": "80927bf8-1e8c-4486-a1d6-9567012fbd15",
+            "containerId": "",
+            "name": "add-box",
+            "url": "localhost:8000/box",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-05-18T19:47:54.130Z",
+            "modified": "2023-05-18T21:49:11.770Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "token 6132807d36f3394dbc1c49edd640b4cbc02315db"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"length\" : 50,\n  \"breadth\" : 50,\n  \"height\" : 40\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "d0407d54-ad1e-428a-85b0-1eb83b0cb113",
+            "colId": "80927bf8-1e8c-4486-a1d6-9567012fbd15",
+            "containerId": "",
+            "name": "update-box",
+            "url": "localhost:8000/box",
+            "method": "PATCH",
+            "sortNum": 40000,
+            "created": "2023-05-18T20:27:29.569Z",
+            "modified": "2023-05-18T21:52:46.178Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "token 6132807d36f3394dbc1c49edd640b4cbc02315db"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\" : 1,\n  \"length\" : 10,\n  \"breadth\" : 10,\n  \"height\" : 20\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e739c4f3-5556-40e3-8925-5c19efc80636",
+            "colId": "80927bf8-1e8c-4486-a1d6-9567012fbd15",
+            "containerId": "",
+            "name": "get-all-boxes-associated-with-requesting-user",
+            "url": "localhost:8000/box",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-05-18T20:44:29.644Z",
+            "modified": "2023-05-18T21:49:20.388Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "token 6132807d36f3394dbc1c49edd640b4cbc02315db"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "9755abb9-aa44-49db-8049-d120846b3663",
+            "colId": "80927bf8-1e8c-4486-a1d6-9567012fbd15",
+            "containerId": "",
+            "name": "get-all-boxes",
+            "url": "localhost:8000/allbox",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-05-18T20:57:34.355Z",
+            "modified": "2023-05-18T20:57:55.018Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f6fd2482-4606-4839-92af-adcd89cf5ec3",
+            "colId": "80927bf8-1e8c-4486-a1d6-9567012fbd15",
+            "containerId": "",
+            "name": "delete-box",
+            "url": "localhost:8000/box",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2023-05-18T21:13:36.786Z",
+            "modified": "2023-05-18T21:53:10.054Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "token 6132807d36f3394dbc1c49edd640b4cbc02315db"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"box_id\": 2\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
